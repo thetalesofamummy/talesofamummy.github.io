@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Book - Read Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">
+                    <i class="fas fa-book-open"></i>
+                    The Tales of a Mummy
+                </h1>
+                <p class="subtitle"></p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="book-section" id="bookSection">
+                <div class="book-header">
+                    <div class="book-info">
+                        <h2 id="bookTitle">My Book Title</h2>
+                        <p id="bookStats">Available for reading</p>
+                    </div>
+                    <div class="book-controls">
+                        <button class="control-btn" id="fullscreenBtn" title="Toggle fullscreen">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                        <button class="control-btn" id="themeBtn" title="Toggle theme">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <button class="control-btn" id="downloadBtn" title="Download PDF">
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="book-content" id="bookContent">
+                    <div class="pdf-container" id="pdfContainer">
+                        <!-- PDF will be embedded here -->
+                        <div class="pdf-placeholder">
+                            <i class="fas fa-file-pdf"></i>
+                            <h3>PDF Book Reader</h3>
+                            <p>Your PDF book will be displayed here</p>
+                            <p class="pdf-instructions">
+                                To add your PDF book:<br>
+                                1. Place your PDF file in the same folder as this website<br>
+                                2. Rename it to "book.pdf"<br>
+                                3. Update the book title in script.js<br>
+                                4. Refresh this page
+                            </p>
+                            <button class="test-pdf-btn" onclick="testPDFFile()">
+                                <i class="fas fa-search"></i>
+                                Test PDF File
+                            </button>
+                        </div>
+                        <iframe id="pdfViewer" src="" style="display: none;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 The Tales of a Mummy.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
